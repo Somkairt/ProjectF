@@ -31,27 +31,15 @@ class _mypageState extends State<mypage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("กระบองเพชร By My Home"),
-      ),
-      body: Center(
-        child: ListView(
-          children: getData(30),
+        appBar: AppBar(
+          title: Text("กระบองเพชร By My Home"),
         ),
-      ),
-    );
-  }
-
-//เตรียมข้อมูล
-  List<Widget> getData(int count) {
-    //ข้อมูลที่เป็นtext widget
-    List<Widget> data = [];
-    for (var i = 1; i <= count; i++) {
-      data.add(Text(
-        "รายการที่ $i",
-        style: TextStyle(fontSize: 24),
-      ));
-    }
-    return data;
+        body: ListView.builder(
+            itemCount: 15,
+            itemBuilder: (BuildContext context, int index) {
+              return ListTile(
+                title: Text("รายงานที่ ${index + 1}"),
+              );
+            }));
   }
 }
