@@ -7,6 +7,7 @@ void main() {
       appBar: AppBar(
         title: Text("กระบองเพชร By My Home"),
       ),
+      body: Text("เชิญชมสินค้าของเรา"),
     ),
   );
   runApp(app);
