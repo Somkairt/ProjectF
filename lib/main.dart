@@ -49,7 +49,11 @@ class _mypageState extends State<mypage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          setState(() {
+            number++;
+          });
+        },
         child: Icon(Icons.add),
       ),
     );
