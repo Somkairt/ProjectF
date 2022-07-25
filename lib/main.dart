@@ -15,7 +15,9 @@ class MyApp extends StatelessWidget {
           appBar: AppBar(
             title: Text("กระบองเพชร By My Home"),
           ),
-          body: Text("เชิญชมสินค้าของเรา"),
+          body: Center(
+            child: Text("เชิญรับน้องๆไปตากแดดกันครับ"),
+          ),
         ),
         theme: ThemeData(primarySwatch: Colors.green) //เปลี่ยนสี
         );
