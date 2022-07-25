@@ -16,7 +16,10 @@ class MyApp extends StatelessWidget {
             title: Text("กระบองเพชร By My Home"),
           ),
           body: Center(
-            child: Text("เชิญรับน้องๆไปตากแดดกันครับ"),
+            child: Text(
+              "เชิญรับน้องๆไปตากแดดกันครับ",
+              style: TextStyle(fontSize: 45, color: Colors.brown),
+            ),
           ),
         ),
         theme: ThemeData(primarySwatch: Colors.green) //เปลี่ยนสี
