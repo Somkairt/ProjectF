@@ -16,9 +16,12 @@ class MyApp extends StatelessWidget {
             title: Text("กระบองเพชร By My Home"),
           ),
           body: Center(
-            child: Text(
-              "เชิญรับน้องๆไปตากแดดกันครับ",
-              style: TextStyle(fontSize: 45, color: Colors.brown),
+            child: Column(
+              children: [
+                Text("ยิมโน"),
+                Text("ยิมโนเชื้อด่าง"),
+                Text("ยิมโนด่าง"),
+              ],
             ),
           ),
         ),
