@@ -27,34 +27,31 @@ class mypage extends StatefulWidget {
 class _mypageState extends State<mypage> {
   int number = 0; //การสร้างstate
 
+//แสดงผลข้อมูล
   @override
   Widget build(BuildContext context) {
-    //ข้อมูลที่เป็นtext widget
-    List<Widget> data = [];
-    for (var i = 0; i < 10; i++) {
-      data.add(Text("รายการที่ $i"));
-    }
-
     return Scaffold(
       appBar: AppBar(
         title: Text("กระบองเพชร By My Home"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: data,
+        child: ListView(
+          children: getData(30),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: addNumber,
-        child: Icon(Icons.add),
       ),
     );
   }
 
-  void addNumber() {
-    setState(() {
-      number++;
-    });
+//เตรียมข้อมูล
+  List<Widget> getData(int count) {
+    //ข้อมูลที่เป็นtext widget
+    List<Widget> data = [];
+    for (var i = 1; i <= count; i++) {
+      data.add(Text(
+        "รายการที่ $i",
+        style: TextStyle(fontSize: 24),
+      ));
+    }
+    return data;
   }
 }
