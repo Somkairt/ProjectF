@@ -25,6 +25,8 @@ class mypage extends StatefulWidget {
 }
 
 class _mypageState extends State<mypage> {
+  int number = 0; //การสร้างstate
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,8 +40,17 @@ class _mypageState extends State<mypage> {
             Text("ยิมโน"),
             Text("ยิมโนเชื้อด่าง"),
             Text("ยิมโนด่าง"),
+            Text("กดปุ่มเพื่อเพิ่มตัวเลข"),
+            Text(
+              number.toString(),
+              style: TextStyle(fontSize: 60),
+            ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add),
       ),
     );
   }
