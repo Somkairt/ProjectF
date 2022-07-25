@@ -29,23 +29,20 @@ class _mypageState extends State<mypage> {
 
   @override
   Widget build(BuildContext context) {
+    //ข้อมูลที่เป็นtext widget
+    List<Widget> data = [];
+    for (var i = 0; i < 10; i++) {
+      data.add(Text("รายการที่ $i"));
+    }
+
     return Scaffold(
       appBar: AppBar(
         title: Text("กระบองเพชร By My Home"),
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Text("ยิมโน"),
-            Text("ยิมโนเชื้อด่าง"),
-            Text("ยิมโนด่าง"),
-            Text("กดปุ่มเพื่อเพิ่มตัวเลข"),
-            Text(
-              number.toString(),
-              style: TextStyle(fontSize: 60),
-            ),
-          ],
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: data,
         ),
       ),
       floatingActionButton: FloatingActionButton(
