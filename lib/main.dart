@@ -71,12 +71,15 @@ class _mypageState extends State<mypage> {
                   ],
                 ),
               ),
+              SizedBox(
+                height: 5,
+              ),
               Container(
                 padding: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                     color: Colors.green,
                     borderRadius: BorderRadius.circular(10)),
-                height: 150,
+                height: 100,
                 child: Row(
                   children: [
                     Text(
@@ -97,11 +100,12 @@ class _mypageState extends State<mypage> {
                   ],
                 ),
               ),
+              SizedBox(height: 5),
               Container(
                 padding: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
                     color: Colors.red, borderRadius: BorderRadius.circular(10)),
-                height: 150,
+                height: 100,
                 child: Row(
                   children: [
                     Text(
@@ -113,6 +117,33 @@ class _mypageState extends State<mypage> {
                     ),
                     Expanded(
                       child: Text("3,000",
+                          style: TextStyle(
+                              fontSize: 30,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                          textAlign: TextAlign.right),
+                    )
+                  ],
+                ),
+              ),
+              SizedBox(height: 5),
+              Container(
+                padding: const EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                    color: Colors.yellowAccent,
+                    borderRadius: BorderRadius.circular(10)),
+                height: 100,
+                child: Row(
+                  children: [
+                    Text(
+                      "ยอดค้างชำระ",
+                      style: TextStyle(
+                          fontSize: 30,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Expanded(
+                      child: Text("400,000",
                           style: TextStyle(
                               fontSize: 30,
                               color: Colors.white,
