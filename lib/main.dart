@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'castusmenu.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,6 +27,7 @@ class mypage extends StatefulWidget {
 
 class _mypageState extends State<mypage> {
   int number = 0; //การสร้างstate
+//กลุ่มข้อมูล
 
 //แสดงผลข้อมูล
   @override
