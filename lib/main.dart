@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: "My App",
         home: mypage(),
-        theme: ThemeData(primarySwatch: Colors.green) //เปลี่ยนสี
+        theme: ThemeData(primarySwatch: Colors.purple) //เปลี่ยนสี
         );
   }
 }
@@ -27,36 +27,32 @@ class mypage extends StatefulWidget {
 
 class _mypageState extends State<mypage> {
   //กลุ่มข้อมูล
-  List<Castusmenu> menu = [
-    Castusmenu("ยิมโนเชื้อด่าง", "5", "assets/images/A.jpg"),
-    Castusmenu("แอสโตร", "50", "assets/images/B.jpg"),
-    Castusmenu("ถังทอง หนามสั้น", "150", "assets/images/C.jpg"),
-    Castusmenu("ยิมโนด่าง ", "150", "assets/images/D.jpg"),
-    Castusmenu("ยิมโนด่าง แม่พันธ์", "500", "assets/images/E.jpg"),
-    Castusmenu("เฟอโรไร้หนาม กอใหญ่", "1500", "assets/images/F.jpg")
-  ];
 
 //แสดงผลข้อมูล
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("กระบองเพชร By My Home"),
+          title: Text("บัญชีของฉัน"),
         ),
-        body: ListView.builder(
-            itemCount: menu.length,
-            itemBuilder: (BuildContext context, int index) {
-              Castusmenu tus = menu[index];
-              return ListTile(
-                  leading: Image.asset(tus.img),
-                  title: Text(
-                    tus.name,
-                    style: TextStyle(fontSize: 30),
-                  ),
-                  subtitle: Text("ราคา" + tus.price + "Bath"),
-                  onTap: () {
-                    print("คุณได้ทำการเลือก =" + tus.name);
-                  });
-            }));
+        body: Column(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.blue, borderRadius: BorderRadius.circular(10)),
+              height: 150,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.red, borderRadius: BorderRadius.circular(10)),
+              height: 150,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.brown, borderRadius: BorderRadius.circular(10)),
+              height: 150,
+            )
+          ],
+        ));
   }
 }
