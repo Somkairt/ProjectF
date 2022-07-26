@@ -26,8 +26,15 @@ class mypage extends StatefulWidget {
 }
 
 class _mypageState extends State<mypage> {
-  int number = 0; //การสร้างstate
-//กลุ่มข้อมูล
+  //กลุ่มข้อมูล
+  List<Castusmenu> menu = [
+    Castusmenu("ยิมโนเชื้อด่าง", "5", "assets/images/A.jpg"),
+    Castusmenu("แอสโตร", "50", "assets/images/B.jpg"),
+    Castusmenu("ถังทอง หนามสั้น", "150", "assets/images/C.jpg"),
+    Castusmenu("ยิมโนด่าง ", "150", "assets/images/D.jpg"),
+    Castusmenu("ยิมโนด่าง แม่พันธ์", "500", "assets/images/E.jpg"),
+    Castusmenu("เฟอโรไร้หนาม กอใหญ่", "1500", "assets/images/F.jpg")
+  ];
 
 //แสดงผลข้อมูล
   @override
@@ -37,10 +44,16 @@ class _mypageState extends State<mypage> {
           title: Text("กระบองเพชร By My Home"),
         ),
         body: ListView.builder(
-            itemCount: 15,
+            itemCount: menu.length,
             itemBuilder: (BuildContext context, int index) {
+              Castusmenu tus = menu[index];
               return ListTile(
-                title: Text("รายงานที่ ${index + 1}"),
+                leading: Image.asset(tus.img),
+                title: Text(
+                  tus.name,
+                  style: TextStyle(fontSize: 30),
+                ),
+                subtitle: Text("ราคา" + tus.price + "Bath"),
               );
             }));
   }

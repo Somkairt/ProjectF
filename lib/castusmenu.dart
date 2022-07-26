@@ -1,6 +1,7 @@
-class castusmenu {
+class Castusmenu {
   String name;
   String price;
+  String img;
 
-  castusmenu(this.name, this.price);
+  Castusmenu(this.name, this.price, this.img);
 }
