@@ -48,13 +48,15 @@ class _mypageState extends State<mypage> {
             itemBuilder: (BuildContext context, int index) {
               Castusmenu tus = menu[index];
               return ListTile(
-                leading: Image.asset(tus.img),
-                title: Text(
-                  tus.name,
-                  style: TextStyle(fontSize: 30),
-                ),
-                subtitle: Text("ราคา" + tus.price + "Bath"),
-              );
+                  leading: Image.asset(tus.img),
+                  title: Text(
+                    tus.name,
+                    style: TextStyle(fontSize: 30),
+                  ),
+                  subtitle: Text("ราคา" + tus.price + "Bath"),
+                  onTap: () {
+                    print("คุณได้ทำการเลือก =" + tus.name);
+                  });
             }));
   }
 }
